@@ -164,7 +164,7 @@ const HomePage = (props: Props) => {
       <div className="border-2 border-gray-800 p-2 relative h-[800px] w-full">
         {/* 왼쪽 상단 - 소파 영역 */}
         <div className="absolute top-0 left-0 w-[200px] h-[100px] border-2 border-gray-800 flex items-center justify-center">
-          <span className="font-bold text-lg">소파</span>
+          <span className="font-bold text-lg">서버</span>
         </div>
         
         {/* 오른쪽 상단 - 식료품과 냉장고, 싱크대, 커피머신 */}
@@ -301,7 +301,7 @@ const HomePage = (props: Props) => {
         
         {/* 최하단 중앙 - 오먼석/전영화 */}
         <div className="absolute bottom-[10px] left-[180px] w-[100px] h-[60px] bg-gray-400 flex items-center justify-center">
-          <span className="text-black font-medium text-xs">오먼석<br/>대표이사</span>
+          <span className="text-black font-medium text-xs">오문석<br/>대표이사</span>
         </div>
         
         <div className="absolute bottom-[10px] right-[180px] w-[100px] h-[60px] bg-gray-400 flex items-center justify-center">
