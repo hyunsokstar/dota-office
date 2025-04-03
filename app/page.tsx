@@ -1,103 +1,315 @@
-import Image from "next/image";
+// import React from 'react';
 
-export default function Home() {
+// type Props = {};
+
+// const HomePage = (props: Props) => {
+//   return (
+//     <div className="max-w-5xl mx-auto p-4">
+//       <h1 className="text-2xl font-bold mb-6">사무실 배치도</h1>
+      
+//       <div className="border-2 border-gray-800 p-2 relative h-[800px] w-full">
+//         {/* 왼쪽 상단 - 소파 영역 */}
+//         <div className="absolute top-0 left-0 w-[200px] h-[100px] border-2 border-gray-800 flex items-center justify-center">
+//           <span className="font-bold text-lg">소파</span>
+//         </div>
+        
+//         {/* 오른쪽 상단 - 식료품과 냉장고 */}
+//         <div className="absolute top-0 right-0 w-[200px] h-[150px] border-2 border-gray-800">
+//           <div className="border-b-2 border-gray-800 h-[40px] flex items-center justify-center">
+//             <span className="font-bold">식료품</span>
+//           </div>
+//           <div className="h-[110px] relative">
+//             <div className="absolute top-[30px] left-[70px] w-[50px] h-[50px] border border-gray-800 flex items-center justify-center">
+//               <span className="text-sm">냉장고</span>
+//             </div>
+//           </div>
+//         </div>
+        
+//         {/* 왼쪽 휴게실 영역 */}
+//         <div className="absolute top-[150px] left-0 w-[300px] h-[250px] border-2 border-gray-800 flex items-center justify-center">
+//           <span className="font-bold text-xl">휴게실</span>
+//           {/* 휴게실의 김남식 실장 자리는 삭제 */}
+//         </div>
+        
+//         {/* 김용주 연구소장 - 신우진 연구원 위치로 이동 */}
+//         <div className="absolute top-[275px] right-[230px] flex items-center space-x-2">
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">김용주<br/>연구소장</span>
+//           </div>
+//         </div>
+        
+//         {/* 중간 왼쪽 위 - 김남식 실장 */}
+//         <div className="absolute top-[320px] left-[120px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">김남식<br/>실장</span>
+//           </div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         {/* 중간 빈자리 */}
+//         <div className="absolute top-[320px] left-[300px] w-[20px] h-[60px] border border-gray-800"></div>
+        
+//         {/* 중간 오른쪽 - 신우진/최성렬/나우성/오현석 */}
+//         <div className="absolute top-[320px] right-[230px] flex items-center space-x-2">
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">신우진<br/>연구원</span>
+//           </div>
+//         </div>
+        
+//         <div className="absolute top-[320px] right-[120px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">최성렬<br/>연구원</span>
+//           </div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         <div className="absolute top-[390px] right-[230px] flex items-center space-x-2">
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">나우성<br/>선임</span>
+//           </div>
+//         </div>
+        
+//         <div className="absolute top-[390px] right-[120px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">오현석<br/>책임</span>
+//           </div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         {/* 아래쪽 왼쪽 빈자리들 */}
+//         <div className="absolute top-[490px] left-[120px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400"></div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         <div className="absolute top-[490px] left-[230px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400"></div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         <div className="absolute top-[560px] left-[120px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400"></div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         <div className="absolute top-[560px] left-[230px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400"></div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         {/* 아래쪽 오른쪽 - 이영렬/허윤 (한칸 오른쪽으로 이동) */}
+//         <div className="absolute top-[490px] right-[120px] flex items-center space-x-2">
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">이영렬<br/>전무</span>
+//           </div>
+//         </div>
+        
+//         <div className="absolute top-[560px] right-[120px] flex items-center space-x-2">
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">허윤<br/>수석</span>
+//           </div>
+//         </div>
+        
+//         {/* 최하단 그룹 */}
+//         <div className="absolute bottom-[80px] left-[120px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">강래곤<br/>상무</span>
+//           </div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         <div className="absolute bottom-[80px] left-[230px] flex items-center space-x-2">
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">김성화<br/>이사</span>
+//           </div>
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//         </div>
+        
+//         <div className="absolute bottom-[80px] right-[230px] flex items-center space-x-2">
+//           <div className="w-[20px] h-[60px] border border-gray-800"></div>
+//           <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+//             <span className="text-black font-medium text-xs">진일규<br/>수석</span>
+//           </div>
+//         </div>
+        
+//         {/* 최하단 중앙 - 오먼석/전영화 */}
+//         <div className="absolute bottom-[10px] left-[180px] w-[100px] h-[60px] bg-gray-400 flex items-center justify-center">
+//           <span className="text-black font-medium text-xs">오먼석<br/>대표이사</span>
+//         </div>
+        
+//         <div className="absolute bottom-[10px] right-[180px] w-[100px] h-[60px] bg-gray-400 flex items-center justify-center">
+//           <span className="text-black font-medium text-xs">전영화<br/>부사장</span>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HomePage;
+
+import React from 'react';
+
+type Props = {};
+
+const HomePage = (props: Props) => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="max-w-5xl mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-6">사무실 배치도</h1>
+      
+      <div className="border-2 border-gray-800 p-2 relative h-[800px] w-full">
+        {/* 왼쪽 상단 - 소파 영역 */}
+        <div className="absolute top-0 left-0 w-[200px] h-[100px] border-2 border-gray-800 flex items-center justify-center">
+          <span className="font-bold text-lg">소파</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        
+        {/* 오른쪽 상단 - 식료품과 냉장고, 싱크대, 커피머신 */}
+        <div className="absolute top-0 right-0 w-[200px] h-[150px] border-2 border-gray-800">
+          <div className="border-b-2 border-gray-800 h-[40px] flex items-center justify-center">
+            <span className="font-bold">식료품</span>
+          </div>
+          <div className="h-[110px] relative">
+            {/* 냉장고 */}
+            <div className="absolute top-[30px] left-[70px] w-[50px] h-[50px] border border-gray-800 flex items-center justify-center">
+              <span className="text-sm">냉장고</span>
+            </div>
+            
+            {/* 싱크대 - 냉장고 왼쪽 */}
+            <div className="absolute top-[30px] left-[10px] w-[50px] h-[50px] border border-gray-800 flex items-center justify-center">
+              <span className="text-sm">싱크대</span>
+            </div>
+            
+            {/* 커피머신 - 냉장고 오른쪽 */}
+            <div className="absolute top-[30px] right-[10px] w-[50px] h-[50px] border border-gray-800 flex items-center justify-center">
+              <span className="text-xs">커피<br/>머신</span>
+            </div>
+          </div>
+        </div>
+        
+        {/* 왼쪽 휴게실 영역 */}
+        <div className="absolute top-[150px] left-0 w-[300px] h-[250px] border-2 border-gray-800 flex items-center justify-center">
+          <span className="font-bold text-xl">휴게실</span>
+        </div>
+        
+        {/* 김용주 연구소장 - 위치 조정 */}
+        <div className="absolute top-[220px] right-[230px] flex items-center space-x-2">
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">김용주<br/>연구소장</span>
+          </div>
+        </div>
+        
+        {/* 중간 오른쪽 - 신우진/최성렬/나우성/오현석 */}
+        <div className="absolute top-[320px] right-[230px] flex items-center space-x-2">
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">신우진<br/>연구원</span>
+          </div>
+        </div>
+        
+        <div className="absolute top-[320px] right-[120px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">최성렬<br/>연구원</span>
+          </div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        <div className="absolute top-[390px] right-[230px] flex items-center space-x-2">
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">나우성<br/>선임</span>
+          </div>
+        </div>
+        
+        <div className="absolute top-[390px] right-[120px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">오현석<br/>책임</span>
+          </div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        {/* 아래쪽 왼쪽 - 김남식 실장이 첫번째 자리로 이동 */}
+        <div className="absolute top-[490px] left-[120px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">김남식<br/>실장</span>
+          </div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        {/* 아래쪽 왼쪽 - 나머지 빈자리들 */}
+        <div className="absolute top-[490px] left-[230px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400"></div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        <div className="absolute top-[560px] left-[120px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400"></div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        <div className="absolute top-[560px] left-[230px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400"></div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        {/* 아래쪽 오른쪽 - 이영렬/허윤 */}
+        <div className="absolute top-[490px] right-[120px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">이영렬<br/>전무</span>
+          </div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        <div className="absolute top-[560px] right-[120px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">허윤<br/>수석</span>
+          </div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        {/* 최하단 그룹 */}
+        <div className="absolute bottom-[80px] left-[120px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">강래곤<br/>상무</span>
+          </div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        <div className="absolute bottom-[80px] left-[230px] flex items-center space-x-2">
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">김성화<br/>이사</span>
+          </div>
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+        </div>
+        
+        {/* 추가 자리 및 진일규 수석 자리 이동 - 더 오른쪽으로 위치 조정 */}
+        <div className="absolute bottom-[80px] right-[230px] flex items-center space-x-2">
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+          <div className="w-[80px] h-[60px] bg-gray-400"></div>
+        </div>
+        
+        <div className="absolute bottom-[80px] right-[120px] flex items-center space-x-2">
+          <div className="w-[20px] h-[60px] border border-gray-800"></div>
+          <div className="w-[80px] h-[60px] bg-gray-400 flex items-center justify-center">
+            <span className="text-black font-medium text-xs">진일규<br/>수석</span>
+          </div>
+        </div>
+        
+        {/* 최하단 중앙 - 오먼석/전영화 */}
+        <div className="absolute bottom-[10px] left-[180px] w-[100px] h-[60px] bg-gray-400 flex items-center justify-center">
+          <span className="text-black font-medium text-xs">오먼석<br/>대표이사</span>
+        </div>
+        
+        <div className="absolute bottom-[10px] right-[180px] w-[100px] h-[60px] bg-gray-400 flex items-center justify-center">
+          <span className="text-black font-medium text-xs">전영화<br/>부사장</span>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default HomePage;
